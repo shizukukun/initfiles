@@ -1,9 +1,15 @@
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+if has("win32") || has("win64") 
+	set rtp+=~/vimfiles/bundle/vundle 
+	call vundle#rc('~/vimfiles/bundle') 
+else 
+	set rtp+=~/.vim/bundle/vundle 
+	call vundle#rc() 
+endif 
 
 Bundle 'gmarik/vundle'
+Bundle 'thinca/vim-quickrun'
 " vim-scripts
 Bundle 'project.tar.gz'
 filetype plugin indent on
@@ -12,12 +18,13 @@ filetype plugin indent on
 set nu
 set clipboard+=unnamed
 set autoindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+set smartindent
 
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
-inoremap < <><LEFT>
+
