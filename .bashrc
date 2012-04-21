@@ -1,5 +1,5 @@
 alias ll='ls -la'
-alias vi='/usr/local/bin/vim'
+alias vi='/usr/bin/vim'
 
 function cd() {
 	builtin cd $@
