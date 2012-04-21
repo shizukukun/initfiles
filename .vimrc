@@ -9,9 +9,13 @@ else
 endif 
 
 Bundle 'gmarik/vundle'
+Bundle 'Shougo/unite.vim'
 Bundle 'thinca/vim-quickrun'
+Bundle 'calendar.vim'
 " vim-scripts
 Bundle 'project.tar.gz'
+
+syntax on
 filetype plugin indent on
 
 
@@ -21,6 +25,7 @@ set autoindent
 set tabstop=2
 set shiftwidth=2
 set smartindent
+
 
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
